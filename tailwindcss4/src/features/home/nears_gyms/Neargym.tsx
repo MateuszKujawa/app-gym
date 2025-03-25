@@ -9,7 +9,6 @@ import {
   faMapPin,
 } from "@fortawesome/free-solid-svg-icons";
 
-// Zdefiniowanie typu dla wydarzenia
 interface Event {
   gym_name: string;
   distance: string;
@@ -18,7 +17,6 @@ interface Event {
   rateing: string;
 }
 
-// Zdefiniowanie danych w formacie JSON
 const nears_gyms: Event[] = [
   {
     gym_name: "B2 Fitness",
@@ -50,7 +48,9 @@ const convertDistanceToNumber = (distance: string) => {
 const Neargym: React.FC = () => {
   const [sliderRef] = useKeenSlider({
     loop: true,
-    slides: { perView: 1.8, spacing: 30 },
+    drag: true, // Pozwala na płynne przeciąganie
+    slides: { perView: 1.8, spacing: 35 },
+    rubberband: true, // Blokuje "ciągnięcie" pustej przestrzeni
   });
 
   // Wyszukiwanie siłowni z najmniejszym dystansem
@@ -78,7 +78,7 @@ const Neargym: React.FC = () => {
           return (
             <div
               key={index}
-              className={`keen-slider__slide relative bg-white p-6 rounded-3xl shadow-lg min-w-[125px] h-[200px] overflow-visible !important z-10 hover:cursor-grab active:cursor-grabbing`}
+              className={`keen-slider__slide relative bg-white p-6 rounded-3xl shadow-lg min-w-[125px] h-[200px] overflow-visible !important z-10 hover:cursor-grab active:cursor-grabbing active:shadow-md active:shadow-indigo-500/20 `}
             >
               {/* nazwa siłowni */}
               <h3 className="text-lg font-bold z-50">{event.gym_name}</h3>

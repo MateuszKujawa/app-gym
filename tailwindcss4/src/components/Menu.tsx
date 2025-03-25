@@ -12,6 +12,9 @@ import {
   faGear,
   faArrowRightToBracket,
   faUserPlus,
+  faChartColumn,
+  faDumbbell,
+  faUtensils,
 } from "@fortawesome/free-solid-svg-icons";
 
 const Menu: React.FC = () => {
@@ -34,7 +37,7 @@ const Menu: React.FC = () => {
       {/* Przycisk otwierania menu */}
       <button
         onClick={toggleMenu}
-        className="p-2 bg-white rounded-full border border-gray-200 hover:bg-gray-200 duration-300 cursor-pointer fixed top-4 left-4"
+        className="p-2 bg-white rounded-full border border-gray-200 hover:bg-gray-200 duration-300 cursor-pointer top-4 left-4"
       >
         <img src={categoryIcon} alt="Menu" className="w-6 h-6" />
       </button>
@@ -115,6 +118,60 @@ const Menu: React.FC = () => {
               >
                 <span className="relative z-10">
                   <FontAwesomeIcon
+                    icon={faChartColumn}
+                    className="w-6 h-6 text-amber-400 pr-5"
+                  />
+                  Statystyki
+                </span>
+
+                {/* Poświata za ikoną */}
+                <div className="absolute left-[-180px] inset-0 bg-gradient-to-r from-zinc-800 via-amber-400/75 to-zinc-900 w-full transition-all duration-300 opacity-0 group-hover:opacity-25 group-focus:opacity-25 z-0"></div>
+              </a>
+            </li>
+
+            <li className="mr-8 ml-4">
+              <a
+                href=""
+                className="block px-6 py-2 bg-transparent border border-transparent hover:border-zinc-600 hover:shadow-lg shadow-black/50 rounded-lg relative group overflow-hidden text-lg text-white duration-200"
+              >
+                <span className="relative z-10">
+                  <FontAwesomeIcon
+                    icon={faDumbbell}
+                    className="w-6 h-6 text-rose-500 pr-5"
+                  />
+                  Plan treningowy
+                </span>
+
+                {/* Poświata za ikoną */}
+                <div className="absolute left-[-180px] inset-0 bg-gradient-to-r from-zinc-800 via-rose-500/75 to-zinc-900 w-full transition-all duration-300 opacity-0 group-hover:opacity-25 group-focus:opacity-25 z-0"></div>
+              </a>
+            </li>
+
+            <li className="mr-8 ml-4">
+              <a
+                href=""
+                className="block px-6 py-2 bg-transparent border border-transparent hover:border-zinc-600 hover:shadow-lg shadow-black/50 rounded-lg relative group overflow-hidden text-lg text-white duration-200"
+              >
+                <span className="relative z-10">
+                  <FontAwesomeIcon
+                    icon={faUtensils}
+                    className="w-6 h-6 text-lime-400 pr-5"
+                  />
+                  Moja dieta
+                </span>
+
+                {/* Poświata za ikoną */}
+                <div className="absolute left-[-180px] inset-0 bg-gradient-to-r from-zinc-800 via-lime-400/75 to-zinc-900 w-full transition-all duration-300 opacity-0 group-hover:opacity-25 group-focus:opacity-25 z-0"></div>
+              </a>
+            </li>
+
+            <li className="mr-8 ml-4">
+              <a
+                href=""
+                className="block px-6 py-2 bg-transparent border border-transparent hover:border-zinc-600 hover:shadow-lg shadow-black/50 rounded-lg relative group overflow-hidden text-lg text-white duration-200"
+              >
+                <span className="relative z-10">
+                  <FontAwesomeIcon
                     icon={faUser}
                     className="w-6 h-6 text-cyan-400 pr-5"
                   />
@@ -122,7 +179,7 @@ const Menu: React.FC = () => {
                 </span>
 
                 {/* Poświata za ikoną */}
-                <div className="absolute left-[-180px] inset-0 bg-gradient-to-r from-zinc-800 via-cyan-800 to-zinc-900 w-full transition-all duration-300 opacity-0 group-hover:opacity-25 group-focus:opacity-25 z-0"></div>
+                <div className="absolute left-[-180px] inset-0 bg-gradient-to-r from-zinc-800 via-cyan-700 to-zinc-900 w-full transition-all duration-300 opacity-0 group-hover:opacity-25 group-focus:opacity-25 z-0"></div>
               </a>
             </li>
 
@@ -140,7 +197,7 @@ const Menu: React.FC = () => {
                 </span>
 
                 {/* Poświata za ikoną */}
-                <div className="absolute left-[-200px] inset-0 bg-gradient-to-r from-zinc-800 via-violet-700 to-zinc-900 w-full transition-all duration-300 opacity-0 group-hover:opacity-15 group-focus:opacity-15 z-0"></div>
+                <div className="absolute left-[-180px] inset-0 bg-gradient-to-r from-zinc-800 via-violet-600 to-zinc-900 w-full transition-all duration-300 opacity-0 group-hover:opacity-15 group-focus:opacity-15 z-0"></div>
               </a>
             </li>
 

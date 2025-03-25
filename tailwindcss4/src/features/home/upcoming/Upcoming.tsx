@@ -2,7 +2,7 @@ import React from "react";
 import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { faLocationDot, faBell } from "@fortawesome/free-solid-svg-icons";
 
 // Obrazy dla kategorii (możesz dodać tutaj wszystkie obrazy, które będą używane w aplikacji)
 import fitnesImage from "../../../assets/upcoming/fitness.svg";
@@ -75,7 +75,9 @@ const Upcoming: React.FC = () => {
 
   return (
     <div className="font-dmsans mx-auto">
-      <h2 className="text-xl text-zinc-900 font-dmsans font-bold mb-6 px-8">Nadchodzące</h2>
+      <h2 className="text-xl text-zinc-900 font-dmsans font-bold mb-6 px-8">
+        <FontAwesomeIcon icon={faBell} className="w-6 h-6"/> Nadchodzące
+      </h2>
       <div ref={sliderRef} className="keen-slider pb-24 pl-8 overflow-visible !important">
         {upcomingEvents.map((event, index) => {
           // Dynamically select image based on category
